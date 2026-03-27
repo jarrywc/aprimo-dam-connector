@@ -1,0 +1,44 @@
+{
+  "name": "aprimo-dam-connector",
+  "version": "0.1.0",
+  "description": "Cross-runtime TypeScript client for the Aprimo DAM API",
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "sideEffects": false,
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "typecheck": "tsc --noEmit",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "aprimo",
+    "dam",
+    "digital-asset-management",
+    "oauth",
+    "pkce"
+  ],
+  "license": "MIT",
+  "devDependencies": {
+    "tsup": "^8.5.0",
+    "typescript": "^5.8.0",
+    "vitest": "^3.1.0"
+  }
+}
