@@ -4,8 +4,21 @@ Cross-runtime TypeScript client for the [Aprimo DAM API](https://developers.apri
 
 ## Install
 
+This package is hosted on [GitHub Packages](https://github.com/jarrywc/aprimo-dam-connector/packages). You'll need to configure npm to use the GitHub registry for the `@jarrywc` scope.
+
+**1. Add a `.npmrc` file to your project root (or home directory):**
+
+```
+@jarrywc:registry=https://npm.pkg.github.com
+//npm.pkg.github.com/:_authToken=YOUR_GITHUB_TOKEN
+```
+
+Replace `YOUR_GITHUB_TOKEN` with a personal access token that has `read:packages` scope.
+
+**2. Install the package:**
+
 ```bash
-npm install aprimo-dam-connector
+npm install @jarrywc/aprimo-dam-connector
 ```
 
 ## Quick Start
@@ -13,7 +26,7 @@ npm install aprimo-dam-connector
 ### Client Credentials (server-side)
 
 ```typescript
-import { AprimoClient } from 'aprimo-dam-connector';
+import { AprimoClient } from '@jarrywc/aprimo-dam-connector';
 
 const client = new AprimoClient({
   tenant: 'your-tenant',
@@ -51,7 +64,7 @@ import {
   buildAuthorizeUrl,
   exchangeCodeForToken,
   AprimoClient,
-} from 'aprimo-dam-connector';
+} from '@jarrywc/aprimo-dam-connector';
 
 // Step 1: Generate PKCE values and redirect user
 const verifier = await generateCodeVerifier();
