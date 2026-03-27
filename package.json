@@ -1,5 +1,5 @@
 {
-  "name": "aprimo-dam-connector",
+  "name": "@jarrywc/aprimo-dam-connector",
   "version": "0.1.0",
   "description": "Cross-runtime TypeScript client for the Aprimo DAM API",
   "type": "module",
@@ -35,6 +35,13 @@
     "oauth",
     "pkce"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/jarrywc/aprimo-dam-connector.git"
+  },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "MIT",
   "devDependencies": {
     "tsup": "^8.5.0",
