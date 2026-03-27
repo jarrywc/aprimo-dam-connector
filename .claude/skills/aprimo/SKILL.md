@@ -93,6 +93,7 @@ const authorizeUrl = buildAuthorizeUrl({
 const tokenResponse = await exchangeCodeForToken({
   tenant: 'your-tenant',
   clientId: 'your-client-id',
+  clientSecret: 'your-client-secret',
   code: 'code-from-callback',
   codeVerifier: verifier,
   redirectUri: 'https://your-app/callback',
@@ -104,6 +105,7 @@ import { refreshAccessToken } from '@jarrywc/aprimo-dam-connector';
 const newToken = await refreshAccessToken({
   tenant: 'your-tenant',
   clientId: 'your-client-id',
+  clientSecret: 'your-client-secret',
   refreshToken: tokenResponse.refresh_token,
   fetchImpl: customFetch,    // optional
 });

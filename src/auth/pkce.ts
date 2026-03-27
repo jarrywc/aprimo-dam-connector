@@ -48,6 +48,7 @@ export function buildAuthorizeUrl(options: BuildAuthorizeUrlOptions): string {
 export interface ExchangeCodeOptions {
   tenant: string;
   clientId: string;
+  clientSecret: string;
   code: string;
   codeVerifier: string;
   redirectUri: string;
@@ -63,6 +64,7 @@ export async function exchangeCodeForToken(
   const body = new URLSearchParams({
     grant_type: 'authorization_code',
     client_id: options.clientId,
+    client_secret: options.clientSecret,
     code: options.code,
     code_verifier: options.codeVerifier,
     redirect_uri: options.redirectUri,
@@ -85,6 +87,7 @@ export async function exchangeCodeForToken(
 export interface RefreshTokenOptions {
   tenant: string;
   clientId: string;
+  clientSecret: string;
   refreshToken: string;
   fetchImpl?: typeof fetch;
 }
@@ -98,6 +101,7 @@ export async function refreshAccessToken(
   const body = new URLSearchParams({
     grant_type: 'refresh_token',
     client_id: options.clientId,
+    client_secret: options.clientSecret,
     refresh_token: options.refreshToken,
   });
 
