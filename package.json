@@ -1,6 +1,6 @@
 {
   "name": "@jarrywc/aprimo-dam-connector",
-  "version": "0.1.0",
+  "version": "0.3.0",
   "description": "Cross-runtime TypeScript client for the Aprimo DAM API",
   "type": "module",
   "main": "./dist/index.cjs",
