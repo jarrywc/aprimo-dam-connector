@@ -40,9 +40,6 @@
     "type": "git",
     "url": "git+https://github.com/jarrywc/aprimo-dam-connector.git"
   },
-  "publishConfig": {
-    "registry": "https://npm.pkg.github.com"
-  },
   "license": "MIT",
   "devDependencies": {
     "tsup": "^8.5.0",
